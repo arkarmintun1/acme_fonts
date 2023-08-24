@@ -1,39 +1,73 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+This flutter package is created to organize the fonts instead of manually adding into project. The explanation can be checked in this article.
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
+## Fonts
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
+- Inter
+- Montserrat
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
-
-## Features
-
-TODO: List what your package can do. Maybe include images, gifs, or videos.
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+- Add the package from github in the project `pubspec.yaml`
+```yaml
+dependencies:
+  acme_fonts:
+    git:
+      url: https://github.com/arkarmintun1/acme_fonts.git
+      ref: main
+```
+- Import the fonts
+```yaml
+flutter:
+  fonts:
+    - family: Inter
+      fonts:
+        - asset: packages/acme_fonts/fonts/Inter-Thin.ttf
+          weight: 100
+        - asset: packages/acme_fonts/fonts/Inter-ExtraLight.ttf
+          weight: 200
+        - asset: packages/acme_fonts/fonts/Inter-Light.ttf
+          weight: 300
+        - asset: packages/acme_fonts/fonts/Inter-Regular.ttf
+          weight: 400
+        - asset: packages/acme_fonts/fonts/Inter-Medium.ttf
+          weight: 500
+        - asset: packages/acme_fonts/fonts/Inter-SemiBold.ttf
+          weight: 600
+        - asset: packages/acme_fonts/fonts/Inter-Bold.ttf
+          weight: 700
+        - asset: packages/acme_fonts/fonts/Inter-ExtraBold.ttf
+          weight: 800
+        - asset: packages/acme_fonts/fonts/Inter-Black.ttf
+          weight: 900
+    - family: Montserrat
+      fonts:
+        - asset: packages/acme_fonts/fonts/Montserrat-Thin.ttf
+          weight: 100
+        - asset: packages/acme_fonts/fonts/Montserrat-ExtraLight.ttf
+          weight: 200
+        - asset: packages/acme_fonts/fonts/Montserrat-Light.ttf
+          weight: 300
+        - asset: packages/acme_fonts/fonts/Montserrat-Regular.ttf
+          weight: 400
+        - asset: packages/acme_fonts/fonts/Montserrat-Medium.ttf
+          weight: 500
+        - asset: packages/acme_fonts/fonts/Montserrat-SemiBold.ttf
+          weight: 600
+        - asset: packages/acme_fonts/fonts/Montserrat-Bold.ttf
+          weight: 700
+        - asset: packages/acme_fonts/fonts/Montserrat-ExtraBold.ttf
+          weight: 800
+        - asset: packages/acme_fonts/fonts/Montserrat-Black.ttf
+          weight: 900
+```
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
-
-```dart
-const like = 'sample';
+```
+Text(
+  "Using the Inter font from the acme_fonts package",
+  style: TextStyle(fontFamily: AcmeFonts.inter),
+)
 ```
 
-## Additional information
-
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
